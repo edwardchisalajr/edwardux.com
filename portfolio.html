@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Chisala - Digital Transformation Specialist | Software Developer </title>
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #0056b3;
+        }
+        header, section, footer {
+            padding: 2rem;
+            text-align: center;
+        }
+        header {
+            background-color: #fff;
+            padding: 4rem 2rem;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        h3 {
+            font-weight: 700;
+        }
+        p {
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+        .buttons {
+            margin: 1.5rem 0;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+        .buttons a i {
+            margin-right: 0.5rem;
+        }
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 2rem 0;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+            min-height: 250px;
+        }
+        .service:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .service i {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+            display: block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .service:hover i {
+            transform: scale(1.2);
+            color: #0056b3;
+        }
+        .service h3 {
+            margin-top: 0;
+        }
+        .service p {
+            margin: 0 auto;
+            max-width: none;
+        }
+        #portfolio .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        #portfolio .project {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: left;
+            transition: box-shadow 0.3s ease;
+        }
+        #portfolio .project:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #portfolio .project h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        #portfolio .project h4 {
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem;
+            color: #007bff;
+        }
+        #portfolio .project p {
+            margin: 0 0 1rem;
+            max-width: none;
+        }
+        #contact p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+        #contact p i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+        #contact p a:hover i,
+        #contact p:hover i {
+            color: #0056b3;
+        }
+        #contact p a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #contact p a:hover {
+            color: #007bff;
+        }
+        footer {
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1rem;
+            }
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+            #portfolio .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>        
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <img src="file.png" alt="portfolio" class="portfolio">
+        <h2>PORTFOLIO</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Coalition of Manitoba Cultural Communities for Families (CMCCF) | </h3>
+                <h4>Role</h4>
+                <p>UX/UI Designer and Researcher</p>
+                <h4>Context</h4>
+                <p>
+                    
+                    CMCCF is a nonprofit organisation supporting diverse cultural and minority communities across Manitoba, Canada. 
+                    Their website shares community events and organisational updates. 
+                    CMCCF fosters inclusion and empowerment by connecting members to vital services and opportunities.
+                    </p>
+                <h4>Problem</h4>
+                <p>
+                    The current website has poor navigation, limited mobile responsiveness, and accessibility issues, 
+                    hindering diverse users from finding information and engaging effectively.
+                
+                </p>
+                <h4>Approach</h4>
+                <p>
+                    
+                    Approached the redesign through usability analysis, restructuring content, 
+                    and simplifying user flows to improve accessibility, clarity and mobile responsiveness.
+                
+                </p>
+                <h4>Outcome</h4>
+                <p>The redesigned platform improved overall usability and accessibility, 
+                    resulting in a more engaging experience for users across 20+ cultural communities.
+                  While providing an easier way to navigate on both desktop and mobile devices.</p>
+
+                <div class="buttons">
+                   <a href="https://drive.google.com/file/d/15XxzBxJN02YyWxJH3kXu5iCP46VVB_Zq/view?usp=sharing" target="_blank"><i class="fas fa-eye"></i> View Project</a>
+                </div>
+
+            </div>
+            <div class="project">
+                <h3>Cyberviolence Awareness Mobile Application | UNESCO Chair (Namibia) in Digital Technologies | </h3>
+                <h4>Role</h4>
+                <p> Software Developer, Research Support</p>
+                <h4>Context</h4>
+                <p>The UNESCO Chair in Digital Technologies focuses on research and interventions addressing digital safety, 
+                    cyberviolence and internet governance. 
+                    The project aimed to develop a mobile application to raise awareness of cyberviolence and support digital safety education.</p>
+                <h4>Problem</h4>
+                <p>
+                    
+                    Cyberviolence resources are fragmented and inaccessible, 
+                    thus creating a need for a user-friendly digital tool to deliver sensitive information clearly and responsibly.
+                
+                </p>
+                <h4>Approach</h4>
+                <p> 
+                    
+                    Developed the app’s design and development by translating user research into intuitive interfaces, structuring content 
+                     and supporting implementation with a focus on simplicity and accessibility.
+                
+                </p>
+                <h4>Outcome</h4>
+                <p>The application was successfully deployed, it supported workshops, 
+                    NGO collaborations, and national-level digital safety initiatives, 
+                    contributing to broader conversations on online safety and cyberviolence prevention.</p>
+                
+                <div class="buttons">
+                    <a href="https://drive.google.com/file/d/1d2frcZTez9Mm5U-YPY1X64BN-GoqZmab/view?usp=sharing" target="_blank"><i class="fas fa-eye"></i> View Project</a>
+                 </div>
+            
+            </div>
+            <div class="project">
+                <h3>Digital Platforms and AI-Supported Systems | African Development Bank (AfDB) | </h3>
+                <h4>Role</h4>
+                <p> Software and Systems Development </p>
+                <h4>Context</h4>
+                <p>
+                    
+                    The AfDB is a multilateral institution supporting economic development and social progress across Africa. 
+                    Their mandate focuses on development priorities: powering the continent, feeding its people, industrializing economies, integrating regions, and enhancing quality of life.
+
+                </p>
+                <h4>Problem</h4>
+                <p>Existing processes required more efficient digital tools to improve usability,
+                     data handling, and system reliability, with regards to manual and inefficient AI CV screening.</p>
+                <h4>Approach</h4>
+                <p>
+                    
+                    Develop a AI web based application through machine learning, UI implementation 
+                    and system testing to ensure usability, security, and performance.
+                    
+                    </p>
+                <h4>Outcome</h4>
+                <p>The systems supported more efficient digital workflows and contributed 
+                    to inclusive employment and data-driven decision-making initiatives within the institution. 
+                While aligning with the Bank’s broader development and SDG-focused objectives.</p>
+                <div class="buttons">
+                    <a href="https://drive.google.com/file/d/1QH7qd7AL676bgJo-ojbRfS_H47pCLg7P/view?usp=sharing" target="_blank"><i class="fas fa-eye"></i> View Project</a>
+                 </div>
+            
+            </div>
+        </div>
+        <hr class="separator">
+    </section>
+
+ 
+
+<!-- CONTACT -->
+<section id="contact">
+    <img src="contactme.png" alt="contactme" class="contactme">
+    <h3>Lets Connect</h3>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+        <a href="mailto:chisalaedward@gmail.com"><i class="fas fa-envelope" style="font-size: 3.5rem;"></i></a>
+        <a href="https://linkedin.com/in/edward-chisala-jr-51b527177" target="_blank"><i class="fab fa-linkedin" style="font-size: 3.5rem;"></i></a>
+        <a href="https://wa.me/264812807120" target="_blank"><i class="fab fa-whatsapp" style="font-size: 3.5rem;"></i></a>
+    </div>
+    <p><i class="fas fa-map-marker-alt"></i> Windhoek, Namibia <br> (Open to Remote Work)</p>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© Edward Chisala | Digital Transformation Specialist | Software Developer </p>
+    </footer>
+
+</body>
+</html>
